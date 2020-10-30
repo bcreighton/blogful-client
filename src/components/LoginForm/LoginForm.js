@@ -34,7 +34,7 @@ export default class LoginForm extends Component {
     ev.preventDefault()
     const { user_name, password } = ev.target
 
-    // pass username and password to save Base64 result as localStorage variable
+    // pass username and password to save Base64 result as sessionStorage variable
     TokenService.saveAuthToken(
       TokenService.makeBasicAuthToken(user_name.value, password.value)
     )
